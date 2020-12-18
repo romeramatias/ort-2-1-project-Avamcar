@@ -3,7 +3,7 @@
     <div class="jumbotron">
       <div class="container mainDiv" align="center">
         <h2>Bienvenido!</h2>
-        <p>Ingresá con tu cuenta para empezar a realizar pedidos.</p>
+        <p class="lead" style="color:white;">Ingresá con tu cuenta para empezar a realizar pedidos.</p>
         <div class="col-md-8">
           <div v-if="errorLogueo" class="alert alert-warning">
             Usuario Incorrecto, intente nuevamente
@@ -40,7 +40,7 @@
             </div>
             <!-- BOTÓN ENVÍO  -->
             <div class="form-group my-3">
-              <button type="submit" :disabled="v.$invalid" class="btn btn-success mt-4" value="Enviar">
+              <button type="submit" :disabled="v.$invalid" class="btn btn-info mt-4" value="Enviar">
                 Ingresar
               </button>
               <br />
@@ -161,8 +161,9 @@ button {
 
 .jumbotron {
   text-align: center;
-  border: 1px solid #213141;
-  background-color: #213141;
+  color: whiye;
+  border: 1px solid #838586;
+  background-color: #a0acb8;
   margin-left: 200px;
   margin-right: 200px;
 }

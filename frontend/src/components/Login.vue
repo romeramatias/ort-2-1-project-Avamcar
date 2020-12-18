@@ -1,9 +1,9 @@
 <template>
-  <section class="src-components-home px-5 m-5">
+  <section class="src-components-home px-3 m-3">
     <div class="jumbotron">
       <div class="container mainDiv" align="center">
         <h2>Bienvenido!</h2>
-        <p class="lead" style="color:white;">Ingresá con tu cuenta para empezar a realizar pedidos.</p>
+        <p class="lead" style="color: black;">Ingresá con tu cuenta para empezar a realizar pedidos.</p>
         <div class="col-md-8">
           <div v-if="errorLogueo" class="alert alert-warning">
             Usuario Incorrecto, intente nuevamente
@@ -30,7 +30,7 @@
             <!-- ------------v-model.number="v.f.password.$model" -->
             <div class="form-group mt-5">
               <label for="password"><b>Contraseña</b></label>
-              <input id="password" v-model="v.f.password.$model" type="password" class="form-control" placeholder="Ingrese password..." />
+              <input id="password" v-model="v.f.password.$model" type="password" class="form-control" placeholder="Ingrese su contraseña..." />
               <!-- CARTELES DE VALIDACIÓN -->
               <div v-if="v.f.password.$error && v.f.password.$dirty" class="alert alert-danger mt-1">
                 <div v-if="v.f.password.required.$invalid">
@@ -40,7 +40,7 @@
             </div>
             <!-- BOTÓN ENVÍO  -->
             <div class="form-group my-3">
-              <button type="submit" :disabled="v.$invalid" class="btn btn-info mt-4" value="Enviar">
+              <button type="submit" :disabled="v.$invalid" class="btn btn-outline-primary mt-4" value="Enviar">
                 Ingresar
               </button>
               <br />
@@ -161,9 +161,8 @@ button {
 
 .jumbotron {
   text-align: center;
-  color: whiye;
-  border: 1px solid #838586;
-  background-color: #a0acb8;
+  border: 1px solid white;
+  background-color: white;
   margin-left: 200px;
   margin-right: 200px;
 }

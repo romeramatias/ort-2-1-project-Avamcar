@@ -3,16 +3,15 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-const cors = require('cors');
-const verificarToken = require("./routes/verificarToken");
 
-const indexRouter = require("./routes/index");
+const cors = require('cors');
+const verificarToken = require("./middlewares/verificarToken");
+
 const usersRouter = require("./routes/users");
 const productRouter = require("./routes/products");
 const pedidoRouter = require("./routes/pedidos");
 
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -24,7 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/products", verificarToken, productRouter);
 app.use("/pedidos", verificarToken, pedidoRouter);

@@ -1,5 +1,5 @@
 const ObjectId = require("mongodb").ObjectId;
-const { Connection } = require("../data/mongo-connection");
+const { Connection } = require("../data/ConnectionMongo");
 const chalk = require("chalk");
 
 async function getAll() {

@@ -1,6 +1,6 @@
 const ObjectId = require("mongodb").ObjectId;
 const bcrypt = require("bcryptjs");
-const { Connection } = require("../data/mongo-connection");
+const { Connection } = require("../data/ConnectionMongo");
 
 async function create(user) {
    if (!user.hasOwnProperty("username") || !user.hasOwnProperty("email") || !user.hasOwnProperty("password"))

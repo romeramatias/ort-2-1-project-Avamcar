@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userRepository = require("../data/user");
+const userRepository = require("../controller/User");
 const jwt = require("jsonwebtoken");
 const config = require("../config");
 const chalk = require("chalk");

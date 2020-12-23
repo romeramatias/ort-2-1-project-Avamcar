@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const pedidosRepository = require("../data/pedido");
-const verificarAdminRol = require("./verificarAdminRol");
+const pedidosRepository = require("../controller/Pedido");
+const verificarAdminRol = require("../middlewares/verificarAdminRol");
 
 
 // GET Todos los pedidos

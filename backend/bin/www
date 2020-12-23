@@ -7,7 +7,7 @@
 var app = require("../app");
 var debug = require("debug")("proyecto-express:server");
 var http = require("http");
-const { Connection } = require("../data/mongo-connection");
+const { Connection } = require("../data/ConnectionMongo");
 const chalk = require("chalk");
 const { now } = require("../util/time");
 
